@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/layout/header.css" rel="stylesheet" />
+    <link href="../css/layout/content.css" rel="stylesheet" />
+    <link href="../css/layout/navbar.css" rel="stylesheet" />
+    <link href="../css/page/customer.css" rel="stylesheet" />
+    <link href="../css/page/conspectus.css"rel="stylesheet" >
+    <link rel="stylesheet" href="../css/page/customer.css">
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar">
+        <div class="logo-box">
+            <div class="sidebar">
+               
+            </div>
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-box">
+            <a class="navbar-item" href="../pages/conspectus.html" >
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Tổng quan</div>
+            </a>
+            <a class="navbar-item" href="../pages/homepage.html">
+                <div class="navbar-icon icon-report"></div>
+                <div class="navbar-text">Danh sách giáo viên</div>
+            </a>
+            <a class="navbar-item" href="../pages/customer.html">
+                <div class="navbar-icon icon-students"></div>
+                <div class="navbar-text">Danh sách học sinh</div>
+            </a>
+            <a class="navbar-item" href="../pages/rules.html  ">
+                <div class="navbar-icon icon-rules"></div>
+                <div class="navbar-text">Nội quy</div>
+            </a>
+            <a class="navbar-item" href="../pages/timetable.html">
+                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-text">Thời khóa biểu</div>
+            </a>
+            <a class="navbar-item" href="../pages/advice.html">
+                <div class="navbar-icon icon-advice"></div>
+                <div class="navbar-text">Hạnh kiểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/point.html">
+                <div class="navbar-icon icon-grade"></div>
+                <div class="navbar-text">Điểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/Charts.html">
+                <div class="navbar-icon icon-aw"></div>
+                <div class="navbar-text">Bảng xếp hạng</div>
+            </a>
+            <a class="navbar-item" href="../pages/setting.html">
+                <div class="navbar-icon icon-setting"></div>
+                <div class="navbar-text">Cài đặt</div>
+            </a>
+
+        </div>
+    </div>
+    <div id="header">
+        
+        <select class="class">
+            <option style="border: 1px solid black;">Class 7A</option>
+            <option style="border: 1px solid black;">Class 7B</option>
+            <option style="border: 1px solid black;">Class 7C</option>
+            <option style="border: 1px solid black;">Class 7D</option>
+            <option style="border: 1px solid black;">Class 7E</option>
+            <option style="border: 1px solid black;">Class 7G</option>
+            <option style="border: 1px solid black;">Class 7H</option>
+            <option style="border: 1px solid black;">Class 7T</option>
+            <option style="border: 1px solid black;">Class 7K</option>
+        </select>
+   
+     
+       
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+            
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+              <h1>Sign Up & Log in</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+        
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+        
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button  style="    position: absolute;
+                bottom: 150px;
+                right: 175px;
+                width: 123px;"  type="submit" class="signupbtn">Sign Up & Log in
+                
+            
+            </button>
+              </div>
+            </div>
+          </form>
+        </div>
+       
+    
+    <div id="content">
+    
+        <div class="page-title">
+            <div class="page-right">
+            
+                <div class="page-left " style="color:#2fbe8e; font-size:45px">Tổng quan</div>
+
+        </div>
+        <div class="grid" style="      position: absolute;  right: 0px; left: 23px; bottom: 0px; top: 72px; overflow-y: auto;" >
+            <h2>
+        1. Giới thiệu sản phẩm:   </h2>
+        <p> Tên sản phẩm: Website cho lớp học (dành cho phụ huynh), </p>
+        <p>Link sản phẩm website cho lớp học (dành cho học sinh):          https://ngocanh6a123.github.io/web-for-6a-class/html/home.html</p>
+        <p> 1. Yêu cầu đối với cơ sở hạ tầng cần thiết để triển khai ứng dụng sản phẩm</p>
+        <p>  •	Máy tính kết nối internet</p>
+        <p>   •	Hệ điều hành: Window 7, 8, 10</p>
+        <p>  •	Responsive:  1690*763</p>
+        <p>
+            2. Sản phẩm được phát triển ước tính trong khoảng thời gian:
+            Số tháng: 3 (Từ tháng 2/2021 đến tháng 5/2020)</p>
+        <p>      3. Phạm vi trang web:  Web quản lý lớp học.</p>
+        <p>   4. Hướng dẫn cài đặt và sử dụng:</p>
+        <p>     Tải app Visual studio code trên google sau đó mở folder chứa bài thi. Tiếp
+        
+            theo nhấp vào biểu tượng thứ 5 ở thanh công cụ   và search “view in browser” sau đó chọn mục 
+           
+             rồi chọn “install ” để tải về sau đó quay lại mục thứ 1 trên thanh công cụ. Tiếp theo chọn File và nhấn Open Folder sau đó chọn Forder chứa bài dự thi. Sau đó nhấp chuột phải vào file conspectus.html chọn View in Brower</p>
+        <p>    5. Mô tả các tính năng cơ bản của sản phẩm: </p>
+        <p>  Trang web gồm 9 mục: </p>
+        <p>- Mục Tổng Quan</p>
+        <p>- mục Danh Sách Học Sinh</p>
+        <p>- mục Danh Sách Giáo Viên</p>
+        <p>- mục Nội Quy,</p>
+        <p>- mục Thời Khóa Biểu</p>
+        <p>- mục Hạnh Kiểm</p>
+        <p>- mục Điểm</p>
+        <p>- mục Bảng Xếp Hạng</p>
+        <p>- mục Cài Đặt</p>
+        <3>MÔ TẢ CHI TIẾT VỀ TỪNG MỤC</h3>
+        <p>    Mục Tổng Quan (Trang Chủ): Trang này bao gồm tất cả thông tin về trang web như hướng dẫn sử dụng, nội dung chi tiết từng mục một. Phần đầu trang có một nút Sign Up để chúng ta có thể đăng ký tài khoản.</p>
+        <p> Mục Danh sách học sinh: Mục Danh sách học sinh sẽ hiển thị các thông tin của các bạn học sinh như Tên, mã học sinh…. Chúng ta có thể thêm, sửa, xóa hoặc tìm kiếm các bạn học sinh. Khi nhấp vào nút thêm học sinh bạn phải điền đầy đủ thông tin để có thể thêm một học sinh mới.</p>
+        <p> 
+            Mục Danh sách giáo viên: Mục Danh sách giáo viên sẽ hiên thị các thông tin của các bạn giáo viên như Tên, mã giáo viên…. Chúng ta có thể thêm, sửa, xóa hoặc tìm kiếm các bạn giáo viên. Khi nhấp vào nút thêm giáo viên bạn phải điền đầy đủ thông tin để có thể thêm một giáo viên mới.</p>
+        <p> Mục Nội quy: Mục Nội quy sẽ tổng hợp đầy đủ các quy định đã được cả lớp đưa ra và đồng thuận.</p>
+        <p>  Mục Thời khóa biểu: Mục thời khóa biểu này sẽ cung cấp thời gian cụ thể của từng môn học, những môn chính sẽ được làm nổi bật lên và khi nhấp vào những môn đó sẽ hiện lên nhưng thông tin về môn học đó như dặn dò của giáo viên, kiến thức trọng tâm,…</p>
+        <p> Mục Hạnh kiểm: Mục này tổng hợp hạnh kiểm của các thành viên trong lớp theo các tuần, các tháng, học kỳ</p>
+        <p>
+            Mục Điểm: Mục Điểm tổng hợp điểm của tất cả các học sinh bằng 1 biểu đồ. Biểu đồ này có 3 thang điểm:</p>
+        <p>  1. Thang điểm từ 5-7đ được biểu thị bằng màu xanh biển.</p>
+        <p> 2. Thang điểm từ 8-9đ được biểu thị bằng màu đỏ.</p>
+        <p>3. Thang điểm 10đ được biểu thị bằng màu vàng.</p>
+        <p>
+            Mỗi cột sẽ biểu thị số lượng điểm của thang điểm có màu tương ứng</p>
+        <p>Mục Bảng xếp hạng: Mục này gồm 2 phần</p>
+        <p>-         Phần thứ nhất bên trái chính là bảng xếp hạng của từng thành viên trong lớp 
+        </p>
+        <p>-        Phần thứ 2 chính là 2 biểu đồ minh họa, biểu đồ thứ 1 dùng để tổng kết tất cả các điểm tốt và điểm cộng của các bạn học sinh và biểu đồ thứ 2 đại diện cho sự tăng trưởng của các môn học trong 5 tháng gần nhất.
+        </p>
+        <p>        Mục Cài đặt: Ở đây sẽ nhận mọi phản hồi của người dùng về trang web để cài đặt và phát triển nâng cao trải nghiệm của người dùng với trang web.
+        </p>
+        <p>        6. Ưu điểm của sản phẩm: 
+        </p>
+        <p>        Một trang web mới, lý thú, được chuyển thể từ quyển “Sổ tay học sinh” giúp các bậc phụ huynh có thể nắm rõ mọi thông tin về lớp và về em con mình, khắc phục những hạn chế, những bất cập của quyệt sổ tay bằng giấy hướng tới sự công bằng với tất cả các học sinh.
+        </p>
+        <p>        7. Tự đánh giá tiềm năng ứng dụng của sản phẩm: Sử dụng để quản lý
+        </p>
+        <p>        8. Tự đánh giá hiệu quả đem lại khi ứng dụng sản phẩm
+        </p>
+        <p>        Giúp các bậc phụ huynh nắm rõ tình hình của các con em mình, tra cứu thông tin dễ dàng, cập nhật thông tin kịp thời…
+        </p>
+        <p>        9. Tự đánh giá về những mặt còn tồn tại chưa giải quyết được của sản phẩm để khắc phục: 
+        </p>
+        <p>        Sản phẩm lần này đã được hoàn thiệt cả về phần UI (giao diện) và phần API (có thêm các chức năng thêm, sửa, xóa...)
+        </p>
+        <h3>        C. KẾT LUẬN
+        </h3>  
+        <p>        2.	Nguyện vọng trong tương lai: Trang web sẽ có nhiều tính năng đặc biệt hơn.
+        </p>                      
+        <h3>        D. TÀI LIỆU THAM KHẢO 
+        </h3>                    
+        <p>        1. Sách (tên sách, tác giả, nhà xuất bản, số ISBN)
+        </p>                  
+        <p>        2. Website : w3shool 
+        </p>
+        <p></p>
+        
+    
+
+        </div>
+      
+    </div>
+
+ 
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+</body>
+</html>

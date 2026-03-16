@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/layout/header.css" rel="stylesheet" />
+    <link href="../css/layout/content.css" rel="stylesheet" />
+    <link href="../css/layout/navbar.css" rel="stylesheet" />
+    <link href="../css/page/customer.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Navbar-->
+    <div id="navbar">
+        <div class="logo-box">
+            <div class="sidebar"></div>
+            <div class="logo"></div>
+        </div>
+        <div class="navbar-box">
+            <a class="navbar-item" href="../pages/conspectus.html" >
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Tổng quan</div>
+            </a>
+            <a class="navbar-item" href="../pages/homepage.html">
+                <div class="navbar-icon icon-report"></div>
+                <div class="navbar-text">Danh sách giáo viên</div>
+            </a>
+            <a class="navbar-item" href="../pages/customer.html">
+                <div class="navbar-icon icon-students"></div>
+                <div class="navbar-text">Danh sách học sinh</div>
+            </a>
+            <a class="navbar-item" href="../pages/rules.html  ">
+                <div class="navbar-icon icon-rules"></div>
+                <div class="navbar-text">Nội quy</div>
+            </a>
+            <a class="navbar-item" href="../pages/timetable.html">
+                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-text">Thời khóa biểu</div>
+            </a>
+            <a class="navbar-item" href="../pages/advice.html">
+                <div class="navbar-icon icon-advice"></div>
+                <div class="navbar-text">Hạnh kiểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/point.html">
+                <div class="navbar-icon icon-grade"></div>
+                <div class="navbar-text">Điểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/Charts.html">
+                <div class="navbar-icon icon-aw"></div>
+                <div class="navbar-text">Bảng xếp hạng</div>
+            </a>
+            <a class="navbar-item" href="../pages/setting.html">
+                <div class="navbar-icon icon-setting"></div>
+                <div class="navbar-text">Cài đặt</div>
+            </a>
+
+        </div>
+    </div>
+    <div id="header">
+        
+        <select class="class">
+            <option style="border: 1px solid black;">Class 7A</option>
+            <option style="border: 1px solid black;">Class 7B</option>
+            <option style="border: 1px solid black;">Class 7C</option>
+            <option style="border: 1px solid black;">Class 7D</option>
+            <option style="border: 1px solid black;">Class 7E</option>
+            <option style="border: 1px solid black;">Class 7G</option>
+            <option style="border: 1px solid black;">Class 7H</option>
+            <option style="border: 1px solid black;">Class 7T</option>
+            <option style="border: 1px solid black;">Class 7K</option>
+        </select>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+    </div>
+    <div id="content">
+        <div class="page-title">
+            <div class="page-left">Danh sách học sinh</div>
+            <div class="page-right">
+                <button id="btnAdd" class="btn-default">Thêm học sinh</button>
+            
+            </div>
+        </div>
+        <div class="toolbar">
+            <input type="text" class="input-search" style="width: 270px;" placeholder="Tìm kiếm theo mã, tên hoc sinh" />
+            <button class="btn-refresh"></button>
+            <button class="btn-delete"><i class="icofont-ui-delete"></i></button>
+        </div>
+        <div class="grid">
+            <table id="tblListCustomer" class="table" width="100%" border="0">
+                <thead>
+                    <tr>
+                        <th>Mã số học sinh</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Tổ</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th class="text-align-right">Quỹ lớp</th>
+                        <th class="text-align-center">Đang hoạt động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stu01</td>
+                        <td>Ngô Hoàng Anh </td>
+                        <td>Nam</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu02</td>
+                        <td>Đỗ Huyền Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu03</td>
+                        <td>Lưu Vũ Quỳnh Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu04</td>
+                        <td>Nguyễn Bảo Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu05</td>
+                        <td>Nguyễn Cẩm Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Stu06</td>
+                        <td>Nguyễn Ngọc Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+
+                    <tr>
+                        <td>Stu07</td>
+                        <td>Nguyễn Hoàng Ngọc Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu08</td>
+                        <td>Nguyễn Hoàng Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu09</td>
+                        <td>Trần Ngọc Anh</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+
+                    <tr>
+                        <td>Stu10</td>
+                        <td>Nguyễn Kiều Chi</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu11</td>
+                        <td>Trần Đức Duy</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu12</td>
+                        <td>Hồ Đức Dương</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+
+                    <tr>
+                        <td>Stu13</td>
+                        <td>Lê Linh Đan</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu14</td>
+                        <td>Đinh Hải Đăng</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu15</td>
+                        <td>Cung Thiện Đức</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu16</td>
+                        <td>Nguyễn Minh Đức</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu17</td>
+                        <td>Cao Hương Giang</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu18</td>
+                        <td>Bùi Phạm Ngân Hà</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu19</td>
+                        <td>Bùi Thị Khánh Hà</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu20</td>
+                        <td>Hoàng Thu Hà</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td>Stu21</td>
+                        <td>Phạm Gia Hân</td>
+                        <td>Nữ</td>
+                        <td>22/09/2008</td>
+                        <td>7</td>
+                        <td>0961179969</td>
+                        <td>nna229@gmail.com</td>
+                        <td  class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked></td>
+                    </tr>
+
+                    <td>Stu22</td>
+                    <td>Phạm Gia Minh</td>
+                    <td>Nữ</td>
+                    <td>22/09/2008</td>
+                    <td>7</td>
+                    <td>0961179969</td>
+                    <td>nna229@gmail.com</td>
+                    <td  class="text-align-right">100.000</td>
+                    <td class="text-align-center"><input type="checkbox" checked></td>
+                </tr>
+                    
+
+                </tbody>
+            </table>
+        </div>
+        <div class="paging">
+            <div data-v-a72348a4="" class="paging-bar">
+            <div data-v-a72348a4="" class="paging-record-info">Hiển thị 
+                <b data-v-a72348a4="">1-30/60</b> Học sinh</div><div data-v-a72348a4="" class="paging-option">
+                    <div data-v-a72348a4="" class="btn-select-page m-btn-firstpage">
+                    </div>
+            <div data-v-a72348a4="" class="btn-select-page m-btn-prev-page"></div>
+            <div data-v-a72348a4="" class="m-btn-list-page">
+                <button data-v-a72348a4="" class="btn-pagenumber btn-pagenumber-selected">1</button>
+                <button data-v-a72348a4="" class="btn-pagenumber "><a href="../pages/customer2.html">2</a></button>
+            </div>
+            <div data-v-a72348a4="" class="btn-select-page m-btn-next-page"></div>
+            <div data-v-a72348a4="" class="btn-select-page m-btn-lastpage"></div>
+        </div>
+            <div data-v-a72348a4="" class="paging-record-option"><b data-v-a72348a4="">30</b> Học sinh/trang</div>
+        </div>
+        </div>
+    </div>
+
+    <div id="dlgCustomerDetail" class="dialog">
+        <div class="model"></div>
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-title">THÔNG TIN HỌC SINH</div>
+                <div class="dialog-close-button">&#x2715;</div>
+            </div>
+            <div class="dialog-body">
+                <div class="m-row">
+                    <div class="m-col">
+                        <label>Mã học sinh</label>
+                        <input id="txtCustomerCode" type="text" />
+                    </div>
+                    <div class="m-col">
+                        <label>Họ và tên</label>
+                        <input id="txtFullName" type="text" />
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="m-col">
+                        <label>Tổ</label>
+                        <select id="cbCustomerGroup">
+                            <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">1</option>
+                            <option value="19165ed7-212e-21c4-0428-030d4265475f">2</option>
+                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">3</option>
+                            <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">4</option>
+                            <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">5</option>
+                            <option value="19165ed7-212e-21c4-0428-030d4265475f">6</option>
+                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">7</option>
+                            <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">8</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="m-col">
+                        <label>Giới tính</label>
+                        <select id='cbGender'>
+                            <option value="1">Nam</option>
+                            <option value="0" >Nữ</option>
+                            <option value="2">Không xác định</option>
+                        </select>
+                    </div>
+                    <div class="m-col">
+                        <label>Ngày sinh</label>
+                        <input id="dtDateOfBirth" type="date" />
+                    </div>
+                </div>
+                <div class="m-row">
+                    <div class="m-col">
+                        <label>Số điện thoại</label>
+                        <input id="txtPhoneNumber" type="text" />
+                    </div>
+                    <div class="m-col">
+                        <label>Email</label>
+                        <input id="txtEmail" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-footer">
+                <button id="btnSave" class="btn-default">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+</body>
+</html>

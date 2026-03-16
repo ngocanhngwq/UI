@@ -1,0 +1,44 @@
+.grid-1-left .top1 .imgtop1 {
+    border-radius: 50%;
+    border: 5px solid #1212a7eb;
+    padding: 3px;
+    margin-left: 328px;
+    width: 128px;
+    height: 128px;
+   }
+   
+.grid-1-left {
+    width: 802px;
+    margin-top: -679px;
+    margin-left: -24px;
+}
+  
+
+    .grid-1-right {
+        width: 700px;
+        height: 750px;
+        margin-top: 56px;
+
+}
+.imgtop2{
+    width: 100px;
+    /* margin-top: -663px; */
+    margin-left: 25px;
+    border-radius: 50%;
+    border: 4px solid #bd2626;
+    padding: 2px;
+}
+.top2-1{
+    width: 167px;
+    margin-right: 38px;
+}
+.imgtop3{
+    border-radius: 50%;
+    width: 85px;
+    border: 4px solid #009688;
+    padding: 1px;
+    margin-left: 26px;
+}
+.top3-1{
+    margin-right: 16px;
+}
