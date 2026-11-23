@@ -1,101 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng xếp hạng - Website Quản Lý Lớp Học</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-       
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawAllCharts);
 
-          ['Language', 'Speakers (in millions)'],
-          ['st1', 30],
-           ['st2', 50],
-            ['st3', 46],
-          ['st4', 55], ['st5', 44], ['st6', 300],
-          ['st7', 38], ['st8', 7], ['st9', 8],
-          ['st10', 20], ['st11', 33], ['st12', 12],
-          ['st13', 52], ['st14', 10], ['st15', 33],
-          ['st16', 29], ['st17', 10], ['st18', 6.5],
-          ['st19', 13], ['st20', 56], ['st21', 57], ['st22', 52],
+        function drawAllCharts() {
+            drawPieChart();
+            drawComboChart();
+        }
 
-        ]);
-       
+        function drawPieChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Học sinh', 'Điểm tích lũy'],
+                ['st1', 30], ['st2', 50], ['st3', 46], ['st4', 55], ['st5', 44], ['st6', 300],
+                ['st7', 38], ['st8', 7], ['st9', 8], ['st10', 20], ['st11', 33], ['st12', 12],
+                ['st13', 52], ['st14', 10], ['st15', 33], ['st16', 29], ['st17', 10], ['st18', 6.5],
+                ['st19', 13], ['st20', 56], ['st21', 57], ['st22', 52]
+            ]);
 
-        var options = {
-          title: 'Biểu đò minh họa ',
-          legend: 'none',
-          pieSliceText: 'label',
-          slices: { 
+            var options = {
+                title: 'Biểu đồ điểm tích lũy học sinh',
+                legend: 'none',
+                pieSliceText: 'label',
+                slices: {
                     12: {offset: 0.2},
                     14: {offset: 0.3},
                     15: {offset: 0.4},
-                    3: {offset: 0.2},
-                    // 19: {offset: 0.36},
-          },
-        };
+                    3: {offset: 0.2}
+                }
+            };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-      }
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+
+        function drawComboChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Tháng', 'Toán', 'Văn', 'Tiếng Anh', 'Sinh Học', 'Sử', 'Trung bình cộng'],
+                ['2021/01', 165, 938, 522, 998, 450, 614.6],
+                ['2021/02', 135, 1120, 599, 1268, 288, 682],
+                ['2021/03', 157, 1167, 587, 807, 397, 623],
+                ['2021/04', 139, 1110, 615, 968, 215, 609.4],
+                ['2021/05', 136, 691, 629, 1026, 366, 569.6]
+            ]);
+
+            var options = {
+                title: 'Biểu đồ tăng trưởng theo tháng',
+                vAxis: {title: 'Điểm'},
+                hAxis: {title: 'Tháng'},
+                seriesType: 'bars',
+                series: {5: {type: 'line'}}
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
     </script>
-
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawVisualization);
-
-  function drawVisualization() {
-    // Some raw data (not necessarily accurate)
-    var data = google.visualization.arrayToDataTable([
-      ['Month', 'Toán', 'Văn', 'Tiếng Anh', 'Sinh Học', 'Sử', 'Trung bình cộng'],
-      ['2021/01',  165,      938,         522,             998,           450,      614.6],
-      ['2021/02',  135,      1120,        599,             1268,          288,      682],
-      ['2021/03',  157,      1167,        587,             807,           397,      623],
-      ['2021/04',  139,      1110,        615,             968,           215,      609.4],
-      ['2021/05',  136,      691,         629,             1026,          366,      569.6]
-    ]);
-
-    var options = {
-      title : 'Biểu đồ tăng trưởng tháng',
-      vAxis: {title: 'Cups'},
-      hAxis: {title: 'Month'},
-      seriesType: 'bars',
-      series: {5: {type: 'line'}}
-    };
-
-    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
-
- 
-</script>
-
-     
- 
-    <title></title>
-   
     <link href="../css/common.css" rel="stylesheet" />
     <link href="../css/layout/header.css" rel="stylesheet" />
     <link href="../css/layout/content.css" rel="stylesheet" />
     <link href="../css/layout/navbar.css" rel="stylesheet" />
     <link href="../css/page/customer.css" rel="stylesheet" />
-    <link href="../css/page/Charts.css" rel="stylesheet" />
-  
-
+    <link href="../css/page/charts.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <div id="navbar">
         <div class="logo-box">
             <div class="sidebar"></div>
             <div class="logo"></div>
         </div>
         <div class="navbar-box">
-            <a class="navbar-item" href="../index.html" >
+            <a class="navbar-item" href="../index.html">
                 <div class="navbar-icon icon-dashboard"></div>
                 <div class="navbar-text">Tổng quan</div>
             </a>
@@ -103,21 +84,17 @@
                 <div class="navbar-icon icon-report"></div>
                 <div class="navbar-text">Danh sách giáo viên</div>
             </a>
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="../pages/customer.html">
                 <div class="navbar-icon icon-students"></div>
                 <div class="navbar-text">Danh sách học sinh</div>
             </a>
-            <a class="navbar-item" href="../pages/rules.html  ">
+            <a class="navbar-item" href="../pages/rules.html">
                 <div class="navbar-icon icon-rules"></div>
                 <div class="navbar-text">Nội quy</div>
             </a>
             <a class="navbar-item" href="../pages/timetable.html">
-                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-icon icon-sche"></div>
                 <div class="navbar-text">Thời khóa biểu</div>
-            </a>
-            <a class="navbar-item" href="../pages/monitoring table.html">
-                <div class="navbar-icon icon-moni"></div>
-                <div class="navbar-text">Bảng thao dõi hành vi</div>
             </a>
             <a class="navbar-item" href="../pages/advice.html">
                 <div class="navbar-icon icon-advice"></div>
@@ -135,188 +112,150 @@
                 <div class="navbar-icon icon-setting"></div>
                 <div class="navbar-text">Cài đặt</div>
             </a>
-
         </div>
     </div>
+    <!-- Header -->
     <div id="header">
-        
         <select class="class">
-            <option style="border: 1px solid black;">Class 7A</option>
-            <option style="border: 1px solid black;">Class 7B</option>
-            <option style="border: 1px solid black;">Class 7C</option>
-            <option style="border: 1px solid black;">Class 7D</option>
-            <option style="border: 1px solid black;">Class 7E</option>
-            <option style="border: 1px solid black;">Class 7G</option>
-            <option style="border: 1px solid black;">Class 7H</option>
-            <option style="border: 1px solid black;">Class 7T</option>
-            <option style="border: 1px solid black;">Class 7K</option>
+            <option>Class 7A</option>
+            <option>Class 7B</option>
+            <option>Class 7C</option>
+            <option>Class 7D</option>
+            <option>Class 7E</option>
+            <option>Class 7G</option>
+            <option>Class 7H</option>
+            <option>Class 7T</option>
+            <option>Class 7K</option>
         </select>
-        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;">Class 7A - We are family!</marquee>
     </div>
     <div id="content">
         <div class="page-title">
-            <div class="page-left " style="color:#2fbe8e; font-size:45px">Ranking</div>
-            <div class="page-right">
-               
-            
-            </div>
+            <div class="page-left" style="color:#2fbe8e; font-size:45px">Bảng xếp hạng</div>
+            <div class="page-right"></div>
         </div>
-        <div class="grid" style="      position: absolute;  right: 0px; left: 5px; bottom: 0px; top: 19px; overflow-y: auto;" >
+        <div class="grid" style="position: absolute; right: 0px; left: 5px; bottom: 0px; top: 19px; overflow-y: auto;">
+            <div class="grid-1-right">
+                <div id="piechart" style="width: 700px; height: 350px; margin-top: -72px; border-style: none none none solid; margin-left: 778px; border-color: #b0a8a8;"></div>
+                <div class="chartid"></div>
+                <div id="chart_div" style="width: 700px; height: 400px; margin-left: 778px; border-color: #b0a8a8; border-style: none none none solid;"></div>
+            </div>
 
-           <div class="grid-1-right">
-            <div id="piechart" style="    width: 700px;  height: 350px; margin-top: -72px; border-style: none none none solid; margin-left: 778px; border-color: #b0a8a8;"></div>
-            <div class="chartid" st></div>
-            <div id="chart_div" style="width: 700px; height: 400px;  margin-left: 778px; border-color: #b0a8a8; border-style: none none none solid;"></div>
-           </div>
-          
-           <div class="grid-1-left">
-               <div class="top1">    
-                  <img class="imgtop1" src="../content/img/44.jpg" alt="">
-                   <p style="text-align: center; font-size: 18px; margin-top: 5px;">top1</p>
-                   <p style="text-align: center;      font-size: 15px;
-                   margin-top: -11px;">st6-Nguyễn Ngọc Anh</p>
-               </div>
-               <div class="top2" style="     position: relative;  display: flex;  right: -117px; ">
-                   <div class="top2-1">
-                       <img class="imgtop2"  src="../content/img/1.jpg" alt="">
-                       <p style="text-align: center; font-size: 18px; margin-top: 5px;">top2</p>
-                       <p style="text-align: center;      font-size: 15px;
-                       margin-top: -11px;">st21-Phạm Gia Hân</p>
-                   </div>
-                   <div class="top2-1">
-                       <img class="imgtop2" style="margin-left: 20px; margin-right:20px;" src="../content/img/2.jpg" alt="">
-                       <p style="padding-left: 57px; font-size: 18px; margin-top: 5px;">top3</p>
-                       <p style="text-align: center;      font-size: 15px;
-                       margin-top: -11px;">st20-Hoàng Thu Hà</p>
-                       <p></p>
-                   </div>
-                   <div class="top2-1">
-                       <img class="imgtop2" src="../content/img/3.jpg" alt="">
-                       <p style="text-align: center; font-size: 18px; margin-top: 5px;">top4</p>
-                       <p style="text-align: center;      font-size: 15px;
-                       margin-top: -11px;">st4-Nguyễn Bảo Anh</p>
-                   </div>
-               </div>
-               <div class="top3" style="  position: relative; display: flex;  left:42px;   ">
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/4.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st13-Lê Linh Đan</p>
+            <div class="grid-1-left">
+                <div class="top1">
+                    <img class="imgtop1" src="../content/img/44.jpg" alt="Top 1" />
+                    <p style="text-align: center; font-size: 18px; margin-top: 5px;">Top 1</p>
+                    <p style="text-align: center; font-size: 15px; margin-top: -11px;">st6 - Nguyễn Ngọc Anh</p>
                 </div>
-               
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/5.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st2-Nguyễn Ngọc Anh</p>
+
+                <div class="top2" style="position: relative; display: flex; right: -117px;">
+                    <div class="top2-1">
+                        <img class="imgtop2" src="../content/img/1.jpg" alt="Top 2" />
+                        <p style="text-align: center; font-size: 18px; margin-top: 5px;">Top 2</p>
+                        <p style="text-align: center; font-size: 15px; margin-top: -11px;">st21 - Phạm Gia Hân</p>
+                    </div>
+                    <div class="top2-1">
+                        <img class="imgtop2" style="margin-left: 20px; margin-right: 20px;" src="../content/img/2.jpg" alt="Top 3" />
+                        <p style="text-align: center; font-size: 18px; margin-top: 5px;">Top 3</p>
+                        <p style="text-align: center; font-size: 15px; margin-top: -11px;">st20 - Hoàng Thu Hà</p>
+                    </div>
+                    <div class="top2-1">
+                        <img class="imgtop2" src="../content/img/3.jpg" alt="Top 4" />
+                        <p style="text-align: center; font-size: 18px; margin-top: 5px;">Top 4</p>
+                        <p style="text-align: center; font-size: 15px; margin-top: -11px;">st4 - Nguyễn Bảo Anh</p>
+                    </div>
                 </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/11.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st3-LV Quỳnh Anh</p>
+
+                <div class="top3" style="position: relative; display: flex; left: 42px;">
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/4.jpg" alt="Top 5" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 5</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st13 - Lê Linh Đan</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/5.jpg" alt="Top 6" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 6</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st2 - Đỗ Huyền Anh</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/11.jpg" alt="Top 7" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 7</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st3 - LV Quỳnh Anh</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/12.jpg" alt="Top 8" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 8</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st5 - Nguyễn Cẩm Anh</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/13.jpg" alt="Top 9" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 9</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st7 - Nguyễn H Ngọc Anh</p>
+                    </div>
                 </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/12.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top3</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st5-Nguyễn Cẩm Anh</p>
-                    <p></p>
+
+                <div class="top3" style="position: relative; display: flex; left: 42px;">
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/14.jpg" alt="Top 10" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 10</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st11 - Trần Đức Duy</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/15.jpg" alt="Top 11" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 11</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st15 - Cung Thiện Đức</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/16.jpg" alt="Top 12" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 12</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st1 - Ngô Hoàng Anh</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/17.jpg" alt="Top 13" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 13</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st16 - Nguyễn Minh Đức</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/18.jpg" alt="Top 14" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 14</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st10 - Nguyễn Kiều Chi</p>
+                    </div>
                 </div>
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/13.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st7-Nguyễn H Ngọc Anh</p>
+
+                <div class="top3" style="position: relative; display: flex; left: 42px;">
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/19.jpg" alt="Top 15" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 15</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st19 - Bùi T Khánh Hà</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/20.jpg" alt="Top 16" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 16</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st12 - Hồ Đức Dương</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/21.jpg" alt="Top 17" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 17</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st14 - Đinh Hải Đăng</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/19.jpg" alt="Top 18" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 18</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st17 - Cao Hương Giang</p>
+                    </div>
+                    <div class="top3-1">
+                        <img class="imgtop3" src="../content/img/20.jpg" alt="Top 19" />
+                        <p style="text-align: center; font-size: 17px; margin-top: 5px;">Top 19</p>
+                        <p style="text-align: center; font-size: 14px; margin-top: -11px;">st9 - Trần Ngọc Anh</p>
+                    </div>
                 </div>
-               
             </div>
-            <div class="top3" style="  position: relative; display: flex;  left:42px;  ">
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/14.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st11-Trần Đức Duy</p>
-                </div>
-               
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/15.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st15-Cung Thiện Đức/p>
-                </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/16.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st1-Ngô Hoàng Anh</p>
-                </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/17.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top3</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st16-Nguyễn Minh Đức</p>
-                    <p></p>
-                </div>
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/18.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st10-Nguyễn Kiều chi</p>
-                </div>
-            </div>
-            <div class="top3" style="  position: relative; display: flex;  left:42px; left:8px;  ">
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/19.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st19- Bùi T Khánh Hà</p>
-                </div>
-               
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/20.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st12-Hồ Đức Dương</p>
-                </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/21.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st14-Đinh Hải Đăng </p>
-                </div>
-                <div class="top3-1">
-                    <img class="imgtop3"  src="../content/img/19.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top2</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st17-Nguyễn Ngọc Anh</p>
-                </div>
-               
-                <div class="top3-1">
-                    <img class="imgtop3" src="../content/img/20.jpg" alt="">
-                    <p style="text-align: center; font-size: 17px;  margin-top: 5px;">top4</p>
-                    <p style="text-align: center;      font-size: 14px;
-                    margin-top: -11px;">st9-Nguyễn Ngọc Anh</p>
-                </div>
-             
-            </div>
-              
-           
         </div>
-         
-        
-           </div>
-          
-        </div>
-       
-      
     </div>
 
-        <script src="../lib/jquery-3.6.0.min.js"></script>
-        <script src="../js/page/customer.js"></script>
-        <script src="../js/page/point.js"></script>
-        <script src="../js/page/charts.js"></script>
-        
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+    <script src="../js/page/point.js"></script>
+    <script src="../js/page/charts.js"></script>
 </body>
 </html>

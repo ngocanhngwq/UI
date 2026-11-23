@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách học sinh - Website Quản Lý Lớp Học</title>
     <link href="../css/common.css" rel="stylesheet" />
     <link href="../css/layout/header.css" rel="stylesheet" />
     <link href="../css/layout/content.css" rel="stylesheet" />
@@ -10,14 +11,14 @@
     <link href="../css/page/customer.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <div id="navbar">
         <div class="logo-box">
             <div class="sidebar"></div>
             <div class="logo"></div>
         </div>
         <div class="navbar-box">
-            <a class="navbar-item" href="../index.html" >
+            <a class="navbar-item" href="../index.html">
                 <div class="navbar-icon icon-dashboard"></div>
                 <div class="navbar-text">Tổng quan</div>
             </a>
@@ -29,12 +30,12 @@
                 <div class="navbar-icon icon-students"></div>
                 <div class="navbar-text">Danh sách học sinh</div>
             </a>
-            <a class="navbar-item" href="../pages/rules.html  ">
+            <a class="navbar-item" href="../pages/rules.html">
                 <div class="navbar-icon icon-rules"></div>
                 <div class="navbar-text">Nội quy</div>
             </a>
             <a class="navbar-item" href="../pages/timetable.html">
-                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-icon icon-sche"></div>
                 <div class="navbar-text">Thời khóa biểu</div>
             </a>
             <a class="navbar-item" href="../pages/advice.html">
@@ -53,36 +54,34 @@
                 <div class="navbar-icon icon-setting"></div>
                 <div class="navbar-text">Cài đặt</div>
             </a>
-
         </div>
     </div>
+    <!-- Header -->
     <div id="header">
-        
         <select class="class">
-            <option style="border: 1px solid black;">Class 7A</option>
-            <option style="border: 1px solid black;">Class 7B</option>
-            <option style="border: 1px solid black;">Class 7C</option>
-            <option style="border: 1px solid black;">Class 7D</option>
-            <option style="border: 1px solid black;">Class 7E</option>
-            <option style="border: 1px solid black;">Class 7G</option>
-            <option style="border: 1px solid black;">Class 7H</option>
-            <option style="border: 1px solid black;">Class 7T</option>
-            <option style="border: 1px solid black;">Class 7K</option>
+            <option>Class 7A</option>
+            <option>Class 7B</option>
+            <option>Class 7C</option>
+            <option>Class 7D</option>
+            <option>Class 7E</option>
+            <option>Class 7G</option>
+            <option>Class 7H</option>
+            <option>Class 7T</option>
+            <option>Class 7K</option>
         </select>
-        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;">Class 7A - We are family!</marquee>
     </div>
     <div id="content">
         <div class="page-title">
             <div class="page-left">Danh sách học sinh</div>
             <div class="page-right">
                 <button id="btnAdd" class="btn-default">Thêm học sinh</button>
-            
             </div>
         </div>
         <div class="toolbar">
-            <input type="text" class="input-search" style="width: 270px;" placeholder="Tìm kiếm theo mã, tên hoc sinh" />
-            <button class="btn-refresh"></button>
-            <button class="btn-delete"><i class="icofont-ui-delete"></i></button>
+            <input type="text" id="txtSearch" class="input-search" style="width: 270px;" placeholder="Tìm kiếm theo mã, tên học sinh" />
+            <button class="btn-refresh" title="Làm mới"></button>
+            <button class="btn-delete" title="Xóa"><i class="icofont-ui-delete"></i></button>
         </div>
         <div class="grid">
             <table id="tblListCustomer" class="table" width="100%" border="0">
@@ -102,205 +101,201 @@
                 <tbody>
                     <tr>
                         <td>Stu01</td>
-                        <td>Ngô Hoàng Anh </td>
+                        <td>Ngô Hoàng Anh</td>
                         <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>1</td>
+                        <td>0900 100 001</td>
+                        <td>stu01@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu02</td>
                         <td>Đỗ Huyền Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>1</td>
+                        <td>0900 100 002</td>
+                        <td>stu02@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu03</td>
                         <td>Lưu Vũ Quỳnh Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>1</td>
+                        <td>0900 100 003</td>
+                        <td>stu03@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu04</td>
                         <td>Nguyễn Bảo Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>2</td>
+                        <td>0900 100 004</td>
+                        <td>stu04@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu05</td>
                         <td>Nguyễn Cẩm Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>2</td>
+                        <td>0900 100 005</td>
+                        <td>stu05@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-                    
                     <tr>
                         <td>Stu06</td>
                         <td>Nguyễn Ngọc Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>2</td>
+                        <td>0900 100 006</td>
+                        <td>stu06@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-
                     <tr>
                         <td>Stu07</td>
                         <td>Nguyễn Hoàng Ngọc Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>3</td>
+                        <td>0900 100 007</td>
+                        <td>stu07@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu08</td>
                         <td>Nguyễn Hoàng Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>3</td>
+                        <td>0900 100 008</td>
+                        <td>stu08@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu09</td>
                         <td>Trần Ngọc Anh</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>3</td>
+                        <td>0900 100 009</td>
+                        <td>stu09@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-
                     <tr>
                         <td>Stu10</td>
                         <td>Nguyễn Kiều Chi</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>4</td>
+                        <td>0900 100 010</td>
+                        <td>stu10@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu11</td>
                         <td>Trần Đức Duy</td>
-                        <td>Nữ</td>
+                        <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>4</td>
+                        <td>0900 100 011</td>
+                        <td>stu11@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu12</td>
                         <td>Hồ Đức Dương</td>
-                        <td>Nữ</td>
+                        <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>4</td>
+                        <td>0900 100 012</td>
+                        <td>stu12@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-
                     <tr>
                         <td>Stu13</td>
                         <td>Lê Linh Đan</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>5</td>
+                        <td>0900 100 013</td>
+                        <td>stu13@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu14</td>
                         <td>Đinh Hải Đăng</td>
-                        <td>Nữ</td>
+                        <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>5</td>
+                        <td>0900 100 014</td>
+                        <td>stu14@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu15</td>
                         <td>Cung Thiện Đức</td>
-                        <td>Nữ</td>
+                        <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>5</td>
+                        <td>0900 100 015</td>
+                        <td>stu15@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu16</td>
                         <td>Nguyễn Minh Đức</td>
-                        <td>Nữ</td>
+                        <td>Nam</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>6</td>
+                        <td>0900 100 016</td>
+                        <td>stu16@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu17</td>
                         <td>Cao Hương Giang</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>6</td>
+                        <td>0900 100 017</td>
+                        <td>stu17@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu18</td>
                         <td>Bùi Phạm Ngân Hà</td>
                         <td>Nữ</td>
                         <td>22/09/2008</td>
-                        <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>6</td>
+                        <td>0900 100 018</td>
+                        <td>stu18@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu19</td>
@@ -308,10 +303,10 @@
                         <td>Nữ</td>
                         <td>22/09/2008</td>
                         <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>0900 100 019</td>
+                        <td>stu19@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu20</td>
@@ -319,10 +314,10 @@
                         <td>Nữ</td>
                         <td>22/09/2008</td>
                         <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>0900 100 020</td>
+                        <td>stu20@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>Stu21</td>
@@ -330,43 +325,39 @@
                         <td>Nữ</td>
                         <td>22/09/2008</td>
                         <td>7</td>
-                        <td>0961179969</td>
-                        <td>nna229@gmail.com</td>
-                        <td  class="text-align-right">100.000</td>
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>0900 100 021</td>
+                        <td>stu21@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-
-                    <td>Stu22</td>
-                    <td>Phạm Gia Minh</td>
-                    <td>Nữ</td>
-                    <td>22/09/2008</td>
-                    <td>7</td>
-                    <td>0961179969</td>
-                    <td>nna229@gmail.com</td>
-                    <td  class="text-align-right">100.000</td>
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>
-                    
-
+                    <tr>
+                        <td>Stu22</td>
+                        <td>Phạm Gia Minh</td>
+                        <td>Nam</td>
+                        <td>22/09/2008</td>
+                        <td>8</td>
+                        <td>0900 100 022</td>
+                        <td>stu22@example.com</td>
+                        <td class="text-align-right">100.000</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <div class="paging">
-            <div data-v-a72348a4="" class="paging-bar">
-            <div data-v-a72348a4="" class="paging-record-info">Hiển thị 
-                <b data-v-a72348a4="">1-30/60</b> Học sinh</div><div data-v-a72348a4="" class="paging-option">
-                    <div data-v-a72348a4="" class="btn-select-page m-btn-firstpage">
+            <div class="paging-bar">
+                <div class="paging-record-info">Hiển thị <b>1-22/22</b> Học sinh</div>
+                <div class="paging-option">
+                    <div class="btn-select-page m-btn-firstpage"></div>
+                    <div class="btn-select-page m-btn-prev-page"></div>
+                    <div class="m-btn-list-page">
+                        <button class="btn-pagenumber btn-pagenumber-selected">1</button>
                     </div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-prev-page"></div>
-            <div data-v-a72348a4="" class="m-btn-list-page">
-                <button data-v-a72348a4="" class="btn-pagenumber btn-pagenumber-selected">1</button>
-                <button data-v-a72348a4="" class="btn-pagenumber "><a href="../pages/customer2.html">2</a></button>
+                    <div class="btn-select-page m-btn-next-page"></div>
+                    <div class="btn-select-page m-btn-lastpage"></div>
+                </div>
+                <div class="paging-record-option"><b>22</b> Học sinh/trang</div>
             </div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-next-page"></div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-lastpage"></div>
-        </div>
-            <div data-v-a72348a4="" class="paging-record-option"><b data-v-a72348a4="">30</b> Học sinh/trang</div>
-        </div>
         </div>
     </div>
 
@@ -392,23 +383,23 @@
                     <div class="m-col">
                         <label>Tổ</label>
                         <select id="cbCustomerGroup">
-                            <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">1</option>
-                            <option value="19165ed7-212e-21c4-0428-030d4265475f">2</option>
-                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">3</option>
-                            <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">4</option>
-                            <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">5</option>
-                            <option value="19165ed7-212e-21c4-0428-030d4265475f">6</option>
-                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">7</option>
-                            <option value="7a0b757e-41eb-4df6-c6f8-494a84b910f4">8</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
                         </select>
                     </div>
                 </div>
                 <div class="m-row">
                     <div class="m-col">
                         <label>Giới tính</label>
-                        <select id='cbGender'>
+                        <select id="cbGender">
                             <option value="1">Nam</option>
-                            <option value="0" >Nữ</option>
+                            <option value="0">Nữ</option>
                             <option value="2">Không xác định</option>
                         </select>
                     </div>
@@ -424,7 +415,7 @@
                     </div>
                     <div class="m-col">
                         <label>Email</label>
-                        <input id="txtEmail" type="text" />
+                        <input id="txtEmail" type="email" />
                     </div>
                 </div>
             </div>
@@ -433,7 +424,16 @@
             </div>
         </div>
     </div>
+
     <script src="../lib/jquery-3.6.0.min.js"></script>
     <script src="../js/page/customer.js"></script>
+    <script>
+        $('#txtSearch').on('input', function() {
+            var q = $(this).val().toLowerCase().trim();
+            $('#tblListCustomer tbody tr').each(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(q) > -1);
+            });
+        });
+    </script>
 </body>
 </html>

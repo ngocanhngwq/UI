@@ -1,0 +1,7 @@
+.vs/
+.vscode/
+**/desktop.ini
+*.suo
+*.sqlite
+.DS_Store
+Thumbs.db

@@ -1,56 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điểm - Website Quản Lý Lớp Học</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+        google.charts.load('current', {'packages': ['bar']});
+        google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Subject', '5-7 điểm', '8-9 diểm', '10 diểm'],
-          ['Maths', 30, 40, 10],
-          ['Literature', 20, 38, 10],
-          ['English', 10, 35, 15],
-          ['Geograpy', 50, 30, 20],
-          ['Biology', 20, 40, 50],
-          ['Techology', 60, 40, 53],
-          ['Physical',19, 40, 49],
-        
-        ]);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Môn học', '5-7 điểm', '8-9 điểm', '10 điểm'],
+                ['Toán (Maths)', 30, 40, 10],
+                ['Ngữ văn (Literature)', 20, 38, 10],
+                ['Tiếng Anh (English)', 10, 35, 15],
+                ['Địa lý (Geography)', 50, 30, 20],
+                ['Sinh học (Biology)', 20, 40, 50],
+                ['Công nghệ (Technology)', 60, 40, 53],
+                ['Vật lý (Physics)', 19, 40, 49]
+            ]);
 
-        var options = {
-          chart: {
-            title:'',
-            subtitle: 'Jan 2021-May 2021',
-          },
-          bars: 'horizontal' // Required for Material Bar Charts.
-        };
+            var options = {
+                chart: {
+                    title: 'Thống kê điểm số theo môn học',
+                    subtitle: 'Tháng 1/2021 - Tháng 5/2021'
+                },
+                bars: 'horizontal'
+            };
 
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
     </script>
-    <title></title>
-   
     <link href="../css/common.css" rel="stylesheet" />
     <link href="../css/layout/header.css" rel="stylesheet" />
     <link href="../css/layout/content.css" rel="stylesheet" />
     <link href="../css/layout/navbar.css" rel="stylesheet" />
     <link href="../css/page/customer.css" rel="stylesheet" />
-   
-
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <div id="navbar">
         <div class="logo-box">
             <div class="sidebar"></div>
             <div class="logo"></div>
         </div>
         <div class="navbar-box">
-            <a class="navbar-item" href="../index.html" >
+            <a class="navbar-item" href="../index.html">
                 <div class="navbar-icon icon-dashboard"></div>
                 <div class="navbar-text">Tổng quan</div>
             </a>
@@ -62,12 +59,12 @@
                 <div class="navbar-icon icon-students"></div>
                 <div class="navbar-text">Danh sách học sinh</div>
             </a>
-            <a class="navbar-item" href="../pages/rules.html  ">
+            <a class="navbar-item" href="../pages/rules.html">
                 <div class="navbar-icon icon-rules"></div>
                 <div class="navbar-text">Nội quy</div>
             </a>
             <a class="navbar-item" href="../pages/timetable.html">
-                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-icon icon-sche"></div>
                 <div class="navbar-text">Thời khóa biểu</div>
             </a>
             <a class="navbar-item" href="../pages/advice.html">
@@ -86,44 +83,35 @@
                 <div class="navbar-icon icon-setting"></div>
                 <div class="navbar-text">Cài đặt</div>
             </a>
-
         </div>
     </div>
+    <!-- Header -->
     <div id="header">
-        
         <select class="class">
-            <option style="border: 1px solid black;">Class 7A</option>
-            <option style="border: 1px solid black;">Class 7B</option>
-            <option style="border: 1px solid black;">Class 7C</option>
-            <option style="border: 1px solid black;">Class 7D</option>
-            <option style="border: 1px solid black;">Class 7E</option>
-            <option style="border: 1px solid black;">Class 7G</option>
-            <option style="border: 1px solid black;">Class 7H</option>
-            <option style="border: 1px solid black;">Class 7T</option>
-            <option style="border: 1px solid black;">Class 7K</option>
+            <option>Class 7A</option>
+            <option>Class 7B</option>
+            <option>Class 7C</option>
+            <option>Class 7D</option>
+            <option>Class 7E</option>
+            <option>Class 7G</option>
+            <option>Class 7H</option>
+            <option>Class 7T</option>
+            <option>Class 7K</option>
         </select>
-        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;">Class 7A - We are family!</marquee>
     </div>
     <div id="content">
         <div class="page-title">
-            <div class="page-left " style="color:#2fbe8e; font-size:40px">Point</div>
-            <div class="page-right">
-               
-            
-            </div>
+            <div class="page-left" style="color:#2fbe8e; font-size:40px">Điểm</div>
+            <div class="page-right"></div>
         </div>
-        <div class="grid-1">
-            <div id="barchart_material" style="width: 1200px; height: 550px;"></div>
+        <div class="grid-1" style="padding: 16px;">
+            <div id="barchart_material" style="width: 100%; max-width: 1150px; height: 550px;"></div>
         </div>
-      
     </div>
 
-   
-    
-  
-        <script src="../lib/jquery-3.6.0.min.js"></script>
-        <script src="../js/page/customer.js"></script>
-        <script src="../js/page/point.js"></script>
-  
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/page/customer.js"></script>
+    <script src="../js/page/point.js"></script>
 </body>
 </html>

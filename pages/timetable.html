@@ -1,407 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
-    <link href="../css/components/style.scss" rel="stylesheet" />
-    <title></title>
-   
+    <title>Thời khóa biểu - Website Quản Lý Lớp Học</title>
     <link href="../css/layout/header.css" rel="stylesheet" />
     <link href="../css/layout/content.css" rel="stylesheet" />
     <link href="../css/page/customer.css" rel="stylesheet" />
     <link href="../css/components/timetable.css" rel="stylesheet" />
-    <link  href="../css/layout/navbar.css" rel="stylesheet"/>
+    <link href="../css/layout/navbar.css" rel="stylesheet" />
     <link href="../css/common.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <div id="navbar">
         <div class="logo-box">
             <div class="sidebar"></div>
             <div class="logo"></div>
         </div>
         <div class="navbar-box">
-          <a class="navbar-item" href="../index.html" >
-              <div class="navbar-icon icon-dashboard"></div>
-              <div class="navbar-text">Tổng quan</div>
-          </a>
-          <a class="navbar-item" href="../pages/homepage.html">
-              <div class="navbar-icon icon-report"></div>
-              <div class="navbar-text">Danh sách giáo viên</div>
-          </a>
-          <a class="navbar-item" href="../pages/customer.html">
-              <div class="navbar-icon icon-students"></div>
-              <div class="navbar-text">Danh sách học sinh</div>
-          </a>
-          <a class="navbar-item" href="../pages/rules.html  ">
-              <div class="navbar-icon icon-rules"></div>
-              <div class="navbar-text">Nội quy</div>
-          </a>
-          <a class="navbar-item" href="../pages/timetable.html">
-              <div class="navbar-icon icon-sche" ></div>
-              <div class="navbar-text">Thời khóa biểu</div>
-          </a>
-          <a class="navbar-item" href="../pages/advice.html">
-              <div class="navbar-icon icon-advice"></div>
-              <div class="navbar-text">Hạnh kiểm</div>
-          </a>
-          <a class="navbar-item" href="../pages/point.html">
-              <div class="navbar-icon icon-grade"></div>
-              <div class="navbar-text">Điểm</div>
-          </a>
-          <a class="navbar-item" href="../pages/Charts.html">
-              <div class="navbar-icon icon-aw"></div>
-              <div class="navbar-text">Bảng xếp hạng</div>
-          </a>
-          <a class="navbar-item" href="../pages/setting.html">
-              <div class="navbar-icon icon-setting"></div>
-              <div class="navbar-text">Cài đặt</div>
-          </a>
-
-      </div>
+            <a class="navbar-item" href="../index.html">
+                <div class="navbar-icon icon-dashboard"></div>
+                <div class="navbar-text">Tổng quan</div>
+            </a>
+            <a class="navbar-item" href="../pages/homepage.html">
+                <div class="navbar-icon icon-report"></div>
+                <div class="navbar-text">Danh sách giáo viên</div>
+            </a>
+            <a class="navbar-item" href="../pages/customer.html">
+                <div class="navbar-icon icon-students"></div>
+                <div class="navbar-text">Danh sách học sinh</div>
+            </a>
+            <a class="navbar-item" href="../pages/rules.html">
+                <div class="navbar-icon icon-rules"></div>
+                <div class="navbar-text">Nội quy</div>
+            </a>
+            <a class="navbar-item" href="../pages/timetable.html">
+                <div class="navbar-icon icon-sche"></div>
+                <div class="navbar-text">Thời khóa biểu</div>
+            </a>
+            <a class="navbar-item" href="../pages/advice.html">
+                <div class="navbar-icon icon-advice"></div>
+                <div class="navbar-text">Hạnh kiểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/point.html">
+                <div class="navbar-icon icon-grade"></div>
+                <div class="navbar-text">Điểm</div>
+            </a>
+            <a class="navbar-item" href="../pages/Charts.html">
+                <div class="navbar-icon icon-aw"></div>
+                <div class="navbar-text">Bảng xếp hạng</div>
+            </a>
+            <a class="navbar-item" href="../pages/setting.html">
+                <div class="navbar-icon icon-setting"></div>
+                <div class="navbar-text">Cài đặt</div>
+            </a>
+        </div>
     </div>
+    <!-- Header -->
     <div id="header">
-        
         <select class="class">
-            <option style="border: 1px solid black;">Class 7A</option>
-            <option style="border: 1px solid black;">Class 7B</option>
-            <option style="border: 1px solid black;">Class 7C</option>
-            <option style="border: 1px solid black;">Class 7D</option>
-            <option style="border: 1px solid black;">Class 7E</option>
-            <option style="border: 1px solid black;">Class 7G</option>
-            <option style="border: 1px solid black;">Class 7H</option>
-            <option style="border: 1px solid black;">Class 7T</option>
-            <option style="border: 1px solid black;">Class 7K</option>
+            <option>Class 7A</option>
+            <option>Class 7B</option>
+            <option>Class 7C</option>
+            <option>Class 7D</option>
+            <option>Class 7E</option>
+            <option>Class 7G</option>
+            <option>Class 7H</option>
+            <option>Class 7T</option>
+            <option>Class 7K</option>
         </select>
-        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;">Class 7A - We are family!</marquee>
     </div>
     <div id="content">
         <div class="page-title">
             <div class="page-left">Thời khóa biểu</div>
-        
-        <div class="grid" style="      position: absolute;  right: 0px; left: 5px; bottom: 0px; top: 75px; overflow-y: auto;">
+        </div>
+        <div class="grid" style="position: absolute; right: 0px; left: 5px; bottom: 0px; top: 75px; overflow-y: auto;">
+            <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+                <div class="cd-schedule__timeline">
+                    <ul>
+                        <li><span>09:00</span></li>
+                        <li><span>09:30</span></li>
+                        <li><span>10:00</span></li>
+                        <li><span>10:30</span></li>
+                        <li><span>11:00</span></li>
+                        <li><span>11:30</span></li>
+                        <li><span>12:00</span></li>
+                        <li><span>12:30</span></li>
+                        <li><span>13:00</span></li>
+                        <li><span>13:30</span></li>
+                        <li><span>14:00</span></li>
+                        <li><span>14:30</span></li>
+                        <li><span>15:00</span></li>
+                        <li><span>15:30</span></li>
+                        <li><span>16:00</span></li>
+                        <li><span>16:30</span></li>
+                        <li><span>17:00</span></li>
+                        <li><span>17:30</span></li>
+                        <li><span>18:00</span></li>
+                    </ul>
+                </div>
 
-<div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
-    <div class="cd-schedule__timeline">
-      <ul>
-        <li><span>09:00</span></li>
-        <li><span>09:30</span></li>
-        <li><span>10:00</span></li>
-        <li><span>10:30</span></li>
-        <li><span>11:00</span></li>
-        <li><span>11:30</span></li>
-        <li><span>12:00</span></li>
-        <li><span>12:30</span></li>
-        <li><span>13:00</span></li>
-        <li><span>13:30</span></li>
-        <li><span>14:00</span></li>
-        <li><span>14:30</span></li>
-        <li><span>15:00</span></li>
-        <li><span>15:30</span></li>
-        <li><span>16:00</span></li>
-        <li><span>16:30</span></li>
-        <li><span>17:00</span></li>
-        <li><span>17:30</span></li>
-        <li><span>18:00</span></li>
-       
-      </ul>
-    </div> <!-- .cd-schedule__timeline -->
-  
-    <div class="cd-schedule__events">
-      <ul>
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Monday</span></div>
-  
-          <ul>
-        
-            <li class="cd-schedule__event">
-              <a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-            <li class="cd_event">
-              <a data-start="15:30" data-end="16:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em  class="cd__name">Sinh học</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="9:00" data-end="10:30" data-content="event-rowing-workout" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Văn chương</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">Tiếng Anh</em>
-              </a>
-            </li>
-            <li class="cd_eventt">
-              <a data-start="16:00" data-end="16:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Lịch sử</em>
-              </a>
-            </li>
-            <li class="cd_event1">
-              <a data-start="11:00" data-end="11:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Địa lý</em>
-              </a>
-            </li>
-            <li class="cd_event4">
-              <a data-start="12:30" data-end="13:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Công Nghệ</em>
-              </a>
-            </li>
-            <li class="cd_event3">
-              <a data-start="12:30" data-end="13:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Vật lý</em>
-              </a>
-            </li>
-            <li class="cd_event5">
-              <a data-start="13:30" data-end="14:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">GDCD</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="16:45" data-end="18:15"  data-content="event-yoga-3" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
-  
-          <ul>
-            <li class="cd_event6">
-              <a data-start="9:00" data-end="9:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Chào cờ</em>
-              </a>
-            </li>
-            <li class="cd_event11">
-              <a data-start="9:00" data-end="9:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Công Nghệ</em>
-              </a>
-            </li>
-          
-            <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Văn chương</em>
-              </a>
-            </li>
-            <li class="cd_event1">
-              <a data-start="11:00" data-end="11:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Thể dục</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Tin học</em>
-              </a>
-            </li>
-            <li class="cd_event3">
-              <a data-start="12:30" data-end="13:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Âm nhạc </em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">Tiếng Anh</em>
-              </a>
-            </li>
-          
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
-  
-          <ul>
-            <li class="cd-schedule__event">
-              <a data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Tin học</em>
-              </a>
-            </li>
-            <li class="cd_event">
-              <a data-start="15:30" data-end="16:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em  class="cd__name">Sinh học</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">Tiếng Anh</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Văn chương</em>
-              </a>
-            </li>
-            <li class="cd_event10">
-              <a data-start="17:30" data-end="18:00"  data-content="event-yoga-1"  href="#0">
-                <em class="cd__name">Địa lý</em>
-              </a>
-            </li>
-          
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">Tiếng Anh</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="16:25" data-end="17:10" data-content="event-restorative-yoga" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Tin học</em>
-              </a>
-            </li>
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Thursday</span></div>
-  
-          <ul>
-         
-            <li class="cd-schedule__event">
-              <a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-            <li class="cd_event1">
-              <a data-start="11:00" data-end="11:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Mĩ thuật</em>
-              </a>
-            </li>
-            <li class="cd_event13">
-              <a data-start="14:00" data-end="14:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Thể dục</em>
-              </a>
-            </li>
-            <li class="cd_event14">
-              <a data-start="15:00" data-end="15:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Vật lý</em>
-              </a>
-            </li>
-            <li class="cd_event8">
-              <a data-start="11:30" data-end="12:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Lịch sử</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Tin học</em>
-              </a>
-            </li>
-       
-  
-            <li class="cd-schedule__event">
-              <a data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Văn chương</em>
-              </a>
-            </li>
-          </ul>
-        </li>
-  
-        <li class="cd-schedule__group">
-          <div class="cd-schedule__top-info"><span>Friday</span></div>
-  
-          <ul>
-         
-            </li>
-            <li class="cd_event7">
-              <a data-start="9:30" data-end="10:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Âm nhạc</em>
-              </a>
-            </li>
-            <li class="cd_event12">
-              <a data-start="9:30" data-end="10:00" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Mĩ thuật</em>
-              </a>
-            </li>
-            <li class="cd_event9">
-              <a data-start="12:00" data-end="12:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">GDCD</em>
-              </a>
-            </li>
-            <li class="cd_event1">
-              <a data-start="11:00" data-end="11:30" data-content="event-abs-circuit" href="#0">
-                <em  class="cd__name">Vật lý</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2" href="#0">
-                <em class="cd-schedule__name">Văn chương</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
-                <em class="cd-schedule__name">Toán</em>
-              </a>
-            </li>
-  
-            <li class="cd-schedule__event">
-              <a data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3" href="#0">
-                <em class="cd-schedule__name">Tiếng Anh</em>
-              </a>
-            </li>
-            <li class="cd-schedule__event">
-              <a data-start="17:30" data-end="18:30" data-content="event-restorative-yoga" data-event="event-4" href="#0">
-                <em class="cd-schedule__name">Tin học</em>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  
-    <div class="cd-schedule-modal">
-      <header class="cd-schedule-modal__header">
-        <div class="cd-schedule-modal__content">
-          <span class="cd-schedule-modal__date"></span>
-          <h3 class="cd-schedule-modal__name"></h3>
-        </div>
-  
-        <div class="cd-schedule-modal__header-bg"></div>
-      </header>
-  
-      <div class="cd-schedule-modal__body">
-        <div class="cd-schedule-modal__event-info"></div>
-        <div class="cd-schedule-modal__body-bg">
-      
-        </div>
-      </div>
-  
-      <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
-    </div>
-  
-    <div class="cd-schedule__cover-layer"></div>
-  </div> <!-- .cd-schedule -->
-       
-                
-              </div>
+                <div class="cd-schedule__events">
+                    <ul>
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info"><span>Monday</span></div>
+                            <ul>
+                                <li class="cd-schedule__event">
+                                    <a data-start="09:30" data-end="10:30" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event">
+                                    <a data-start="15:30" data-end="16:00" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd__name">Sinh học</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="09:00" data-end="10:30" data-content="event-2" data-event="event-2" href="#0">
+                                        <em class="cd-schedule__name">Văn chương</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="14:00" data-end="15:15" data-content="event-3" data-event="event-3" href="#0">
+                                        <em class="cd-schedule__name">Tiếng Anh</em>
+                                    </a>
+                                </li>
+                                <li class="cd_eventt">
+                                    <a data-start="16:00" data-end="16:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Lịch sử</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event1">
+                                    <a data-start="11:00" data-end="11:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Địa lý</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event4">
+                                    <a data-start="12:30" data-end="13:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Công Nghệ</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event3">
+                                    <a data-start="12:30" data-end="13:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Vật lý</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event5">
+                                    <a data-start="13:30" data-end="14:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">GDCD</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="16:45" data-end="18:15" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
-             
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+                            <ul>
+                                <li class="cd_event6">
+                                    <a data-start="09:00" data-end="09:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Chào cờ</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event11">
+                                    <a data-start="09:00" data-end="09:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Công Nghệ</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="10:00" data-end="11:00" data-content="event-2" data-event="event-2" href="#0">
+                                        <em class="cd-schedule__name">Văn chương</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event1">
+                                    <a data-start="11:00" data-end="11:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Thể dục</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="11:30" data-end="13:00" data-content="event-4" data-event="event-4" href="#0">
+                                        <em class="cd-schedule__name">Tin học</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event3">
+                                    <a data-start="12:30" data-end="13:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Âm nhạc</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="13:30" data-end="15:00" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="15:45" data-end="16:45" data-content="event-3" data-event="event-3" href="#0">
+                                        <em class="cd-schedule__name">Tiếng Anh</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+                            <ul>
+                                <li class="cd-schedule__event">
+                                    <a data-start="09:00" data-end="10:15" data-content="event-4" data-event="event-4" href="#0">
+                                        <em class="cd-schedule__name">Tin học</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event">
+                                    <a data-start="15:30" data-end="16:00" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd__name">Sinh học</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="10:45" data-end="11:45" data-content="event-3" data-event="event-3" href="#0">
+                                        <em class="cd-schedule__name">Tiếng Anh</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="12:00" data-end="13:45" data-content="event-2" data-event="event-2" href="#0">
+                                        <em class="cd-schedule__name">Văn chương</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event10">
+                                    <a data-start="17:30" data-end="18:00" data-content="event-3" href="#0">
+                                        <em class="cd__name">Địa lý</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="13:45" data-end="15:00" data-content="event-3" data-event="event-3" href="#0">
+                                        <em class="cd-schedule__name">Tiếng Anh</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="16:25" data-end="17:10" data-content="event-4" data-event="event-4" href="#0">
+                                        <em class="cd-schedule__name">Tin học</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info"><span>Thursday</span></div>
+                            <ul>
+                                <li class="cd-schedule__event">
+                                    <a data-start="09:30" data-end="10:30" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event1">
+                                    <a data-start="11:00" data-end="11:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Mĩ thuật</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event13">
+                                    <a data-start="14:00" data-end="14:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Thể dục</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event14">
+                                    <a data-start="15:00" data-end="15:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Vật lý</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event8">
+                                    <a data-start="11:30" data-end="12:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Lịch sử</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="12:00" data-end="13:45" data-content="event-4" data-event="event-4" href="#0">
+                                        <em class="cd-schedule__name">Tin học</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="15:30" data-end="16:30" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="17:00" data-end="18:30" data-content="event-2" data-event="event-2" href="#0">
+                                        <em class="cd-schedule__name">Văn chương</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="cd-schedule__group">
+                            <div class="cd-schedule__top-info"><span>Friday</span></div>
+                            <ul>
+                                <li class="cd_event7">
+                                    <a data-start="09:30" data-end="10:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Âm nhạc</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event12">
+                                    <a data-start="09:30" data-end="10:00" data-content="event-1" href="#0">
+                                        <em class="cd__name">Mĩ thuật</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event9">
+                                    <a data-start="12:00" data-end="12:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">GDCD</em>
+                                    </a>
+                                </li>
+                                <li class="cd_event1">
+                                    <a data-start="11:00" data-end="11:30" data-content="event-1" href="#0">
+                                        <em class="cd__name">Vật lý</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="10:00" data-end="11:00" data-content="event-2" data-event="event-2" href="#0">
+                                        <em class="cd-schedule__name">Văn chương</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="12:30" data-end="14:00" data-content="event-1" data-event="event-1" href="#0">
+                                        <em class="cd-schedule__name">Toán</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="15:45" data-end="16:45" data-content="event-3" data-event="event-3" href="#0">
+                                        <em class="cd-schedule__name">Tiếng Anh</em>
+                                    </a>
+                                </li>
+                                <li class="cd-schedule__event">
+                                    <a data-start="17:30" data-end="18:30" data-content="event-4" data-event="event-4" href="#0">
+                                        <em class="cd-schedule__name">Tin học</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cd-schedule-modal">
+                    <header class="cd-schedule-modal__header">
+                        <div class="cd-schedule-modal__content">
+                            <span class="cd-schedule-modal__date"></span>
+                            <h3 class="cd-schedule-modal__name"></h3>
+                        </div>
+                        <div class="cd-schedule-modal__header-bg"></div>
+                    </header>
+                    <div class="cd-schedule-modal__body">
+                        <div class="cd-schedule-modal__event-info"></div>
+                        <div class="cd-schedule-modal__body-bg"></div>
+                    </div>
+                    <a href="#0" class="cd-schedule-modal__close text-replace">Close</a>
+                </div>
+
+                <div class="cd-schedule__cover-layer"></div>
+            </div>
         </div>
-       
     </div>
-    <script src="../js/page/util.js"></script> 
+
+    <script src="../js/page/util.js"></script>
     <script src="../js/page/main.js"></script>
     <script src="../lib/jquery-3.6.0.min.js"></script>
     <script src="../js/page/customer.js"></script>

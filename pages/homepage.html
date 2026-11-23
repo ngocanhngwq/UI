@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách giáo viên - Website Quản Lý Lớp Học</title>
     <link href="../css/common.css" rel="stylesheet" />
     <link href="../css/layout/header.css" rel="stylesheet" />
     <link href="../css/layout/content.css" rel="stylesheet" />
@@ -10,14 +11,14 @@
     <link href="../css/page/customer.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Navbar-->
+    <!-- Navbar -->
     <div id="navbar">
         <div class="logo-box">
             <div class="sidebar"></div>
             <div class="logo"></div>
         </div>
         <div class="navbar-box">
-            <a class="navbar-item" href="../index.html" >
+            <a class="navbar-item" href="../index.html">
                 <div class="navbar-icon icon-dashboard"></div>
                 <div class="navbar-text">Tổng quan</div>
             </a>
@@ -29,12 +30,12 @@
                 <div class="navbar-icon icon-students"></div>
                 <div class="navbar-text">Danh sách học sinh</div>
             </a>
-            <a class="navbar-item" href="../pages/rules.html  ">
+            <a class="navbar-item" href="../pages/rules.html">
                 <div class="navbar-icon icon-rules"></div>
                 <div class="navbar-text">Nội quy</div>
             </a>
             <a class="navbar-item" href="../pages/timetable.html">
-                <div class="navbar-icon icon-sche" ></div>
+                <div class="navbar-icon icon-sche"></div>
                 <div class="navbar-text">Thời khóa biểu</div>
             </a>
             <a class="navbar-item" href="../pages/advice.html">
@@ -53,36 +54,34 @@
                 <div class="navbar-icon icon-setting"></div>
                 <div class="navbar-text">Cài đặt</div>
             </a>
-
         </div>
     </div>
+    <!-- Header -->
     <div id="header">
-        
         <select class="class">
-            <option style="border: 1px solid black;">Class 7A</option>
-            <option style="border: 1px solid black;">Class 7B</option>
-            <option style="border: 1px solid black;">Class 7C</option>
-            <option style="border: 1px solid black;">Class 7D</option>
-            <option style="border: 1px solid black;">Class 7E</option>
-            <option style="border: 1px solid black;">Class 7G</option>
-            <option style="border: 1px solid black;">Class 7H</option>
-            <option style="border: 1px solid black;">Class 7T</option>
-            <option style="border: 1px solid black;">Class 7K</option>
+            <option>Class 7A</option>
+            <option>Class 7B</option>
+            <option>Class 7C</option>
+            <option>Class 7D</option>
+            <option>Class 7E</option>
+            <option>Class 7G</option>
+            <option>Class 7H</option>
+            <option>Class 7T</option>
+            <option>Class 7K</option>
         </select>
-        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;" >Class 7A-We are family!</marquee>
+        <marquee direction="left" style="color:#2fbe8e; font-size:24px; margin-bottom: 24px;">Class 7A - We are family!</marquee>
     </div>
     <div id="content">
         <div class="page-title">
             <div class="page-left">Danh sách giáo viên</div>
             <div class="page-right">
                 <button id="btnAdd" class="btn-default">Thêm giáo viên</button>
-            
             </div>
         </div>
         <div class="toolbar">
-            <input type="text" class="input-search" style="width: 270px;" placeholder="Tìm kiếm theo mã, tên sinh viên" />
-            <button class="btn-refresh"></button>
-            <button class="btn-delete"></button>
+            <input type="text" id="txtSearch" class="input-search" style="width: 270px;" placeholder="Tìm kiếm theo mã, tên giáo viên" />
+            <button class="btn-refresh" title="Làm mới"></button>
+            <button class="btn-delete" title="Xóa"></button>
         </div>
         <div class="grid">
             <table id="tblListCustomer" class="table" width="100%" border="0">
@@ -94,7 +93,6 @@
                         <th>Ngày sinh</th>
                         <th>Điện thoại</th>
                         <th>Email</th>
-                        <!-- <th class="text-align-right">Quỹ lớp</th> -->
                         <th class="text-align-center">Đang công tác</th>
                     </tr>
                 </thead>
@@ -104,136 +102,127 @@
                         <td>Đặng Lan Anh</td>
                         <td>Nữ</td>
                         <td>22/09/1972</td>
-                        <td>0983020013</td>
-                        <td>đla@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>0900 000 001</td>
+                        <td>dla@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
                     <tr>
                         <td>tc02</td>
                         <td>Đặng Quang Bình</td>
                         <td>Nam</td>
                         <td>02/08/1982</td>
-                        <td>0123789634</td>
-                        <td>đqb@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
-                  
-                    </tr>  <tr>
+                        <td>0900 000 002</td>
+                        <td>dqb@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
                         <td>tc03</td>
                         <td>Nguyễn Minh Huệ</td>
                         <td>Nữ</td>
                         <td>15/09/1985</td>
-                        <td>0687439201</td>
-                        <td>nmh@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
-                    </tr>  <tr>
+                        <td>0900 000 003</td>
+                        <td>nmh@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
                         <td>tc04</td>
                         <td>Lê Tuyết</td>
                         <td>Nữ</td>
                         <td>30/09/1999</td>
-                        <td>0961179969</td>
-                        <td>lt@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
-                    </tr>  <tr>
+                        <td>0900 000 004</td>
+                        <td>lt@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
                         <td>tc05</td>
                         <td>Nguyễn Thúy Quỳnh</td>
                         <td>Nữ</td>
-                        <td>04/09/2008</td>
-                        <td>0453129877</td>
-                        <td>ntq@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
-                    </tr>  <tr>
+                        <td>04/09/1995</td>
+                        <td>0900 000 005</td>
+                        <td>ntq@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
                         <td>tc06</td>
                         <td>Trần Tiểu Vi</td>
                         <td>Nữ</td>
-                        <td>15/08/2000</td>
-                        <td>09812353647</td>
-                        <td>ttv@gmail.com</td>
-                        <!-- <td  class="text-align-right">100.000</td> -->
-                        <td class="text-align-center"><input type="checkbox" checked></td>
+                        <td>15/08/1996</td>
+                        <td>0900 000 006</td>
+                        <td>ttv@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
                     </tr>
-                </tr>  <tr>
-                    <td>tc07</td>
-                    <td>Lê Tuyết Mai</td>
-                    <td>Nữ</td>
-                    <td>19/07/1985</td>
-                    <td>0687439201</td>
-                    <td>ltm@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>  <tr>
-                    <td>tc08</td>
-                    <td>Lê Thị Hà</td>
-                    <td>Nữ</td>
-                    <td>20/12/1999</td>
-                    <td>0921397654</td>
-                    <td>lth@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr> 
-                 <tr>
-                    <td>tc09</td>
-                    <td>Trần Thu Thủy</td>
-                    <td>Nữ</td>
-                    <td>30/12/2000</td>
-                    <td>0753929854</td>
-                    <td>ttt@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>  <tr>
-                    <td>tc10</td>
-                    <td>Phạm Văn Hà</td>
-                    <td>Nam</td>
-                    <td>23/11/1994</td>
-                    <td>08642975437</td>
-                    <td>ttv@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>
-                <tr>
-                    <td>tc11</td>
-                    <td>Trần Nguyệt Hạ</td>
-                    <td>Nữ</td>
-                    <td>13/12/1996</td>
-                    <td>0753929854</td>
-                    <td>ttt@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>  <tr>
-                    <td>tc12</td>
-                    <td>Phạm Huyền Trang</td>
-                    <td>Nữ</td>
-                    <td>23/01/1997</td>
-                    <td>0549683785</td>
-                    <td>pht@gmail.com</td>
-                    <!-- <td  class="text-align-right">100.000</td> -->
-                    <td class="text-align-center"><input type="checkbox" checked></td>
-                </tr>
-
+                    <tr>
+                        <td>tc07</td>
+                        <td>Lê Tuyết Mai</td>
+                        <td>Nữ</td>
+                        <td>19/07/1985</td>
+                        <td>0900 000 007</td>
+                        <td>ltm@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
+                        <td>tc08</td>
+                        <td>Lê Thị Hà</td>
+                        <td>Nữ</td>
+                        <td>20/12/1994</td>
+                        <td>0900 000 008</td>
+                        <td>lth@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
+                        <td>tc09</td>
+                        <td>Trần Thu Thủy</td>
+                        <td>Nữ</td>
+                        <td>30/12/1993</td>
+                        <td>0900 000 009</td>
+                        <td>ttt@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
+                        <td>tc10</td>
+                        <td>Phạm Văn Hà</td>
+                        <td>Nam</td>
+                        <td>23/11/1994</td>
+                        <td>0900 000 010</td>
+                        <td>pvh@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
+                        <td>tc11</td>
+                        <td>Trần Nguyệt Hạ</td>
+                        <td>Nữ</td>
+                        <td>13/12/1996</td>
+                        <td>0900 000 011</td>
+                        <td>tnh@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
+                    <tr>
+                        <td>tc12</td>
+                        <td>Phạm Huyền Trang</td>
+                        <td>Nữ</td>
+                        <td>23/01/1997</td>
+                        <td>0900 000 012</td>
+                        <td>pht@example.com</td>
+                        <td class="text-align-center"><input type="checkbox" checked /></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-       <div class="paging">
-            <div data-v-a72348a4="" class="paging-bar">
-            <div data-v-a72348a4="" class="paging-record-info">Hiển thị 
-                <b data-v-a72348a4="">1-30/60</b> Giáo viên</div><div data-v-a72348a4="" class="paging-option">
-                    <div data-v-a72348a4="" class="btn-select-page m-btn-firstpage">
+        <div class="paging">
+            <div class="paging-bar">
+                <div class="paging-record-info">Hiển thị <b>1-12/12</b> Giáo viên</div>
+                <div class="paging-option">
+                    <div class="btn-select-page m-btn-firstpage"></div>
+                    <div class="btn-select-page m-btn-prev-page"></div>
+                    <div class="m-btn-list-page">
+                        <button class="btn-pagenumber btn-pagenumber-selected">1</button>
                     </div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-prev-page"></div>
-            <div data-v-a72348a4="" class="m-btn-list-page">
-                <button data-v-a72348a4="" class="btn-pagenumber btn-pagenumber-selected">1</button>
-                <button data-v-a72348a4="" class="btn-pagenumber "><a href="../pages/customer2.html">2</a></button>
+                    <div class="btn-select-page m-btn-next-page"></div>
+                    <div class="btn-select-page m-btn-lastpage"></div>
+                </div>
+                <div class="paging-record-option"><b>12</b> giáo viên/trang</div>
             </div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-next-page"></div>
-            <div data-v-a72348a4="" class="btn-select-page m-btn-lastpage"></div>
         </div>
-            <div data-v-a72348a4="" class="paging-record-option"><b data-v-a72348a4="">30</b>giáo viên/trang</div>
-        </div>
-        </div> 
     </div>
 
     <div id="dlgCustomerDetail" class="dialog-hide">
@@ -258,20 +247,19 @@
                     <div class="m-col">
                         <label>Tổ</label>
                         <select id="cbCustomerGroup">
-                            <option value="0cb5da7c-59cd-4953-b17e-c9adc9161663">Khoa học</option>
-                            <option value="19165ed7-212e-21c4-0428-030d4265475f">Tự nhiên</option>
-                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Xã hội</option>
-                            <option value="3631011e-4559-4ad8-b0ad-cb989f2177da">Anh-Thể-Mĩ</option>
+                            <option value="khoa-hoc">Khoa học</option>
+                            <option value="tu-nhien">Tự nhiên</option>
+                            <option value="xa-hoi">Xã hội</option>
+                            <option value="anh-the-mi">Anh-Thể-Mĩ</option>
                         </select>
                     </div>
                 </div>
                 <div class="m-row">
                     <div class="m-col">
                         <label>Giới tính</label>
-                        <select id='cbGender'>
+                        <select id="cbGender">
                             <option value="1">Nam</option>
-                            <option value="0" >Nữ</option>
-                            <!-- <option value="2">Không xác định</option> -->
+                            <option value="0">Nữ</option>
                         </select>
                     </div>
                     <div class="m-col">
@@ -286,7 +274,7 @@
                     </div>
                     <div class="m-col">
                         <label>Email</label>
-                        <input id="txtEmail" type="text" />
+                        <input id="txtEmail" type="email" />
                     </div>
                 </div>
             </div>
@@ -295,7 +283,16 @@
             </div>
         </div>
     </div>
+
     <script src="../lib/jquery-3.6.0.min.js"></script>
     <script src="../js/page/customer.js"></script>
+    <script>
+        $('#txtSearch').on('input', function() {
+            var q = $(this).val().toLowerCase().trim();
+            $('#tblListCustomer tbody tr').each(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(q) > -1);
+            });
+        });
+    </script>
 </body>
 </html>
